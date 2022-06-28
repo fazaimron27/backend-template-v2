@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Tesla | Administrator</title>
+    <title>Blog - Tesla | Administrator</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css">
     <!-- Fonts CSS -->
@@ -16,6 +16,7 @@
         rel="stylesheet">
     <!-- Icons CSS -->
     <link rel="stylesheet" href="css/feather.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
     <!-- Date Range Picker CSS -->
     <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- App CSS -->
@@ -119,7 +120,46 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h1 class="page-title">Let's start</h1>
+                        <h2 class="mb-2 page-title">Blog</h2>
+                        <div class="row my-4">
+                            <!-- Small table -->
+                            <div class="col-md-12">
+                                <div class="card shadow">
+                                    <div class="card-header">
+                                        <button type="button" class="btn mb-2 btn-primary"><span
+                                                class="fe fe-plus fe-16 mr-2"></span>Create New Blog</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- table -->
+                                        <table class="table datatables" id="dataTable-1">
+                                            <thead>
+                                                <tr>
+                                                    <th>No.</th>
+                                                    <th>Title</th>
+                                                    <th>Description</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>John Doe</td>
+                                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Praesentium accusamus veniam illum voluptate debitis, temporibus
+                                                        placeat porro vero, reiciendis, possimus nulla quam
+                                                        necessitatibus neque fuga odit id atque magnam fugiat.</td>
+                                                    <td>
+                                                        <a href="#"> <i class="fe fe-eye text-primary fe-16"></i></a>
+                                                        <a href="#"> <i class="fe fe-edit text-warning fe-16"></i></a>
+                                                        <a href="#"> <i class="fe fe-trash-2 text-danger fe-16"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div> <!-- simple table -->
+                        </div> <!-- end section -->
                     </div> <!-- .col-12 -->
                 </div> <!-- .row -->
             </div> <!-- .container-fluid -->
@@ -263,6 +303,18 @@
     <script src='js/jquery.stickOnScroll.js'></script>
     <script src="js/tinycolor-min.js"></script>
     <script src="js/config.js"></script>
+    <script src='js/jquery.dataTables.min.js'></script>
+    <script src='js/dataTables.bootstrap4.min.js'></script>
+    <script>
+        $('#dataTable-1').DataTable({
+            autoWidth: true,
+            "lengthMenu": [
+                [16, 32, 64, -1],
+                [16, 32, 64, "All"]
+            ]
+        });
+
+    </script>
     <script src="js/apps.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
