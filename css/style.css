@@ -1,0 +1,13 @@
+/* @media only screen and (max-width: 768px) {
+    .img-input {
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .img-input {
+        width: 720px !important;
+        height: 300px !important;
+    }
+} */
