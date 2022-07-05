@@ -42,6 +42,17 @@
                         <i class="fe fe-sun fe-16"></i>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-shortcut">
+                        <span class="fe fe-grid fe-16"></span>
+                    </a>
+                </li>
+                <li class="nav-item nav-notif">
+                    <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-notif">
+                        <span class="fe fe-bell fe-16"></span>
+                        <span class="dot dot-md bg-success"></span>
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink"
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,9 +61,9 @@
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="./profile.html">Profile</a>
-                        <a class="dropdown-item" href="./setting.html">Settings</a>
-                        <a class="dropdown-item text-danger" href="#">Logout</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activities</a>
                     </div>
                 </li>
             </ul>
@@ -65,8 +76,7 @@
                 <!-- nav bar -->
                 <div class="w-100 mb-4 d-flex">
                     <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-                        <img src="./assets/images/logo.png" alt="Logo tesla" class="navbar-brand-img brand-md"
-                            id="logo">
+                        <img src="./assets/images/logo.png" alt="Logo tesla" class="navbar-brand-img brand-md" id="logo">
                     </a>
                 </div>
                 <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -74,6 +84,12 @@
                         <a class="nav-link" href="./">
                             <i class="fe fe-home fe-16"></i>
                             <span class="ml-3 item-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100">
+                        <a class="nav-link" href="blog.html">
+                            <i class="fe fe-archive fe-16"></i>
+                            <span class="ml-3 item-text">Blog</span>
                         </a>
                     </li>
                     <li class="nav-item w-100">
@@ -101,53 +117,8 @@
                             <div class="col-md-12">
                                 <div class="card shadow">
                                     <div class="card-header">
-                                        <button type="button" class="btn mb-2 btn-primary" data-toggle="modal"
-                                            data-target="#blogModal" data-backdrop="static" data-keyboard="false"><span
-                                                class="fe fe-plus fe-16 mr-2"></span>Add New
-                                            Metadata</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="blogModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="blogModalTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="blogModalTitle">Add New Metadata
-                                                        </h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form class="needs-validation" novalidate>
-                                                            <div class="form-row">
-                                                                <div class="col-md-12 mb-3">
-                                                                    <label for="title">Key</label>
-                                                                    <input type="email" class="form-control" id="title"
-                                                                        required>
-                                                                    <div class="invalid-feedback"> Please use a valid
-                                                                        key</div>
-                                                                </div>
-                                                                <div class="col-md-12 mb-3">
-                                                                    <label for="title">value</label>
-                                                                    <input type="email" class="form-control" id="title"
-                                                                        required>
-                                                                    <div class="invalid-feedback"> Please use a valid
-                                                                        value</div>
-                                                                </div>
-                                                            </div>
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn mb-2 btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn mb-2 btn-primary">Save
-                                                            changes</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <button type="button" class="btn mb-2 btn-primary"><span
+                                                class="fe fe-plus fe-16 mr-2"></span>Add New Metadata</button>
                                     </div>
                                     <div class="card-body">
                                         <!-- table -->
@@ -166,12 +137,9 @@
                                                     <td>company_name</td>
                                                     <td>Tesla</td>
                                                     <td>
-                                                        <a href="#"> <i
-                                                                class="fe fe-eye text-primary fe-16 mx-1"></i></a>
-                                                        <a href="#"> <i
-                                                                class="fe fe-edit text-warning fe-16 mx-1"></i></a>
-                                                        <a href="#"> <i
-                                                                class="fe fe-trash-2 text-danger fe-16 mx-1"></i></a>
+                                                        <a href="#"> <i class="fe fe-eye text-primary fe-16 mx-1"></i></a>
+                                                        <a href="#"> <i class="fe fe-edit text-warning fe-16 mx-1"></i></a>
+                                                        <a href="#"> <i class="fe fe-trash-2 text-danger fe-16 mx-1"></i></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -345,6 +313,7 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-56159088-1');
+
     </script>
 </body>
 
