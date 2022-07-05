@@ -17,6 +17,12 @@
     <!-- Icons CSS -->
     <link rel="stylesheet" href="css/feather.css">
     <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="css/uppy.min.css">
+    <link rel="stylesheet" href="css/jquery.steps.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
     <!-- Date Range Picker CSS -->
     <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- App CSS -->
@@ -67,7 +73,8 @@
                 <!-- nav bar -->
                 <div class="w-100 mb-4 d-flex">
                     <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-                        <img src="./assets/images/logo.png" alt="Logo tesla" class="navbar-brand-img brand-md" id="logo">
+                        <img src="./assets/images/logo.png" alt="Logo tesla" class="navbar-brand-img brand-md"
+                            id="logo">
                     </a>
                 </div>
                 <ul class="navbar-nav flex-fill w-100 mb-2">
@@ -112,7 +119,8 @@
                                             <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="blogModalTitle">Add New Metadata</h5>
+                                                        <h5 class="modal-title" id="blogModalTitle">Add New Metadata
+                                                        </h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -138,13 +146,14 @@
                                                                         value</div>
                                                                 </div>
                                                             </div>
-                                                        </form>
+
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn mb-2 btn-secondary"
                                                             data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn mb-2 btn-primary">Save
+                                                        <button type="submit" class="btn mb-2 btn-primary">Save
                                                             changes</button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
@@ -167,9 +176,12 @@
                                                     <td>company_name</td>
                                                     <td>Tesla</td>
                                                     <td>
-                                                        <a href="#"> <i class="fe fe-eye text-primary fe-16 mx-1"></i></a>
-                                                        <a href="#"> <i class="fe fe-edit text-warning fe-16 mx-1"></i></a>
-                                                        <a href="#"> <i class="fe fe-trash-2 text-danger fe-16 mx-1"></i></a>
+                                                        <a href="#"> <i
+                                                                class="fe fe-eye text-primary fe-16 mx-1"></i></a>
+                                                        <a href="#"> <i
+                                                                class="fe fe-edit text-warning fe-16 mx-1"></i></a>
+                                                        <a href="#"> <i
+                                                                class="fe fe-trash-2 text-danger fe-16 mx-1"></i></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -323,6 +335,14 @@
     <script src="js/config.js"></script>
     <script src='js/jquery.dataTables.min.js'></script>
     <script src='js/dataTables.bootstrap4.min.js'></script>
+    <script src='js/jquery.mask.min.js'></script>
+    <script src='js/select2.min.js'></script>
+    <script src='js/jquery.steps.min.js'></script>
+    <script src='js/jquery.validate.min.js'></script>
+    <script src='js/jquery.timepicker.js'></script>
+    <script src='js/dropzone.min.js'></script>
+    <script src='js/uppy.min.js'></script>
+    <script src='js/quill.min.js'></script>
     <script>
         $('#dataTable-1').DataTable({
             autoWidth: true,
@@ -343,7 +363,6 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-56159088-1');
-
     </script>
 </body>
 
