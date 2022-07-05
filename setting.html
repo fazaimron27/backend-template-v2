@@ -7,9 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Tesla | Administrator</title>
+    <title>Blog - Tesla | Administrator</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css">
+
     <!-- Fonts CSS -->
     <link
         href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
@@ -17,6 +18,12 @@
     <!-- Icons CSS -->
     <link rel="stylesheet" href="css/feather.css">
     <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="css/uppy.min.css">
+    <link rel="stylesheet" href="css/jquery.steps.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
     <!-- Date Range Picker CSS -->
     <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- App CSS -->
@@ -24,6 +31,7 @@
     <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
     <!-- Shortcut icon -->
     <link rel="shortcut icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="vertical  light  ">
@@ -69,6 +77,7 @@
                             id="logo">
                     </a>
                 </div>
+
                 <ul class="navbar-nav flex-fill w-100 mb-2">
                     <li class="nav-item w-100">
                         <a class="nav-link" href="./">
@@ -95,92 +104,32 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2 class="mb-2 page-title">Product</h2>
-                        <div class="row my-4">
-                            <!-- Small table -->
-                            <div class="col-md-12">
-                                <div class="card shadow">
-                                    <div class="card-header">
-                                        <button type="button" class="btn mb-2 btn-primary" data-toggle="modal"
-                                            data-target="#blogModal" data-backdrop="static" data-keyboard="false"><span
-                                                class="fe fe-plus fe-16 mr-2"></span>Add New
-                                            Metadata</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="blogModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="blogModalTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="blogModalTitle">Add New Metadata
-                                                        </h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form class="needs-validation" novalidate>
-                                                            <div class="form-row">
-                                                                <div class="col-md-12 mb-3">
-                                                                    <label for="title">Key</label>
-                                                                    <input type="email" class="form-control" id="title"
-                                                                        required>
-                                                                    <div class="invalid-feedback"> Please use a valid
-                                                                        key</div>
-                                                                </div>
-                                                                <div class="col-md-12 mb-3">
-                                                                    <label for="title">value</label>
-                                                                    <input type="email" class="form-control" id="title"
-                                                                        required>
-                                                                    <div class="invalid-feedback"> Please use a valid
-                                                                        value</div>
-                                                                </div>
-                                                            </div>
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn mb-2 btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn mb-2 btn-primary">Save
-                                                            changes</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="col">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <h3>Reset Password</h3>
+                                        <div class="form-group mb-3 mt-3">
+                                            <label for="example-palaceholder">Old Password</label>
+                                            <input type="text" id="example-palaceholder" class="form-control border-0"
+                                                placeholder="Password">
                                         </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- table -->
-                                        <table class="table datatables" id="dataTable-1">
-                                            <thead>
-                                                <tr>
-                                                    <th>No.</th>
-                                                    <th>Key</th>
-                                                    <th>Value</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>company_name</td>
-                                                    <td>Tesla</td>
-                                                    <td>
-                                                        <a href="#"> <i
-                                                                class="fe fe-eye text-primary fe-16 mx-1"></i></a>
-                                                        <a href="#"> <i
-                                                                class="fe fe-edit text-warning fe-16 mx-1"></i></a>
-                                                        <a href="#"> <i
-                                                                class="fe fe-trash-2 text-danger fe-16 mx-1"></i></a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="form-group mb-3 mt-5">
+                                            <label for="example-palaceholder">New Password</label>
+                                            <input type="text" id="example-palaceholder" class="form-control border-0"
+                                                placeholder="Password">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="example-palaceholder">Confirm New Password</label>
+                                            <input type="text" id="example-palaceholder" class="form-control border-0"
+                                                placeholder="Confirm your password">
+                                        </div>
+                                        <button type="button" class="btn my-2 btn-success text-white">Save
+                                            changes</button>
                                     </div>
                                 </div>
-                            </div> <!-- simple table -->
-                        </div> <!-- end section -->
-                    </div> <!-- .col-12 -->
+                            </div>
+                        </div>
+                    </div> <!-- /.col-12 -->
                 </div> <!-- .row -->
             </div> <!-- .container-fluid -->
             <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog"
@@ -325,6 +274,28 @@
     <script src="js/config.js"></script>
     <script src='js/jquery.dataTables.min.js'></script>
     <script src='js/dataTables.bootstrap4.min.js'></script>
+    <script src='js/jquery.mask.min.js'></script>
+    <script src='js/select2.min.js'></script>
+    <script src='js/jquery.steps.min.js'></script>
+    <script src='js/jquery.validate.min.js'></script>
+    <script src='js/jquery.timepicker.js'></script>
+    <script src='js/dropzone.min.js'></script>
+    <script src='js/uppy.min.js'></script>
+    <script src='js/quill.min.js'></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
     <script>
         $('#dataTable-1').DataTable({
             autoWidth: true,
@@ -333,6 +304,178 @@
                 [16, 32, 64, "All"]
             ]
         });
+    </script>
+    <script>
+        $('.select2').select2({
+            theme: 'bootstrap4',
+        });
+        $('.select2-multi').select2({
+            multiple: true,
+            theme: 'bootstrap4',
+        });
+        $('.drgpicker').daterangepicker({
+            singleDatePicker: true,
+            timePicker: false,
+            showDropdowns: true,
+            locale: {
+                format: 'MM/DD/YYYY'
+            }
+        });
+        $('.time-input').timepicker({
+            'scrollDefault': 'now',
+            'zindex': '9999' /* fix modal open */
+        });
+        /** date range picker */
+        if ($('.datetimes').length) {
+            $('.datetimes').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'M/DD hh:mm A'
+                }
+            });
+        }
+        var start = moment().subtract(29, 'days');
+        var end = moment();
+
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month')
+                    .endOf('month')
+                ]
+            }
+        }, cb);
+        cb(start, end);
+        $('.input-placeholder').mask("00/00/0000", {
+            placeholder: "__/__/____"
+        });
+        $('.input-zip').mask('00000-000', {
+            placeholder: "____-___"
+        });
+        $('.input-money').mask("#.##0,00", {
+            reverse: true
+        });
+        $('.input-phoneus').mask('(000) 000-0000');
+        $('.input-mixed').mask('AAA 000-S0S');
+        $('.input-ip').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+            translation: {
+                'Z': {
+                    pattern: /[0-9]/,
+                    optional: true
+                }
+            },
+            placeholder: "___.___.___.___"
+        });
+        // editor
+        var editor = document.getElementById('editor');
+        if (editor) {
+            var toolbarOptions = [
+                [{
+                    'font': []
+                }],
+                [{
+                    'header': [1, 2, 3, 4, 5, 6, false]
+                }],
+                ['bold', 'italic', 'underline', 'strike'],
+                ['blockquote', 'code-block'],
+                [{
+                        'header': 1
+                    },
+                    {
+                        'header': 2
+                    }
+                ],
+                [{
+                        'list': 'ordered'
+                    },
+                    {
+                        'list': 'bullet'
+                    }
+                ],
+                [{
+                        'script': 'sub'
+                    },
+                    {
+                        'script': 'super'
+                    }
+                ],
+                [{
+                        'indent': '-1'
+                    },
+                    {
+                        'indent': '+1'
+                    }
+                ], // outdent/indent
+                [{
+                    'direction': 'rtl'
+                }], // text direction
+                [{
+                        'color': []
+                    },
+                    {
+                        'background': []
+                    }
+                ], // dropdown with defaults from theme
+                [{
+                    'align': []
+                }],
+                ['clean'] // remove formatting button
+            ];
+            var quill = new Quill(editor, {
+                modules: {
+                    toolbar: toolbarOptions
+                },
+                theme: 'snow'
+            });
+        }
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script>
+        var uptarg = document.getElementById('drag-drop-area');
+        if (uptarg) {
+            var uppy = Uppy.Core().use(Uppy.Dashboard, {
+                inline: true,
+                target: uptarg,
+                proudlyDisplayPoweredByUppy: false,
+                theme: 'dark',
+                width: 'auto',
+                height: 300,
+                plugins: ['Webcam']
+            }).use(Uppy.Tus, {
+                endpoint: 'https://master.tus.io/files/'
+            });
+            uppy.on('complete', (result) => {
+                console.log('Upload complete! We’ve uploaded these files:', result.successful)
+            });
+        }
     </script>
     <script src="js/apps.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -346,6 +489,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-56159088-1');
     </script>
+
 </body>
 
 </html>
