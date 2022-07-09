@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="favicon.ico"> -->
     <title>Tesla | Administrator</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css">
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
     <!-- Shortcut icon -->
     <link rel="shortcut icon" href="./assets/images/logo.png">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="vertical light">
@@ -49,7 +51,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="./profile.html">Profile</a>
-                        <a class="dropdown-item" href="./product.html">Settings</a>
+                        <a class="dropdown-item" href="./setting.html">Settings</a>
                         <a class="dropdown-item text-danger" href="#">Logout</a>
                     </div>
                 </li>
@@ -99,33 +101,40 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2 class="mb-2 page-title">Metadata</h2>
+                        <h2 class="mb-2 page-title">Team</h2>
                         <div class="row my-4">
                             <!-- Small table -->
                             <div class="col-md-12">
                                 <div class="card shadow">
                                     <div class="card-header">
                                         <button type="button" class="btn mb-2 btn-primary" data-toggle="modal"
-                                            data-target="#metadataModal" data-backdrop="static"
-                                            data-keyboard="false"><span class="fe fe-plus fe-16 mr-2"></span>Add
-                                            New Metadata</button>
+                                            data-target="#teamModal" data-backdrop="static" data-keyboard="false"><span
+                                                class="fe fe-plus fe-16 mr-2"></span>Add
+                                            New Team</button>
                                     </div>
+
                                     <div class="card-body">
                                         <!-- table -->
-                                        <table class="table datatables" id="metadataDataTable">
+                                        <table class="table datatables" id="teamDataTable">
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                    <th>Key</th>
-                                                    <th>Value</th>
+                                                    <th>Name</th>
+                                                    <th>ID Card</th>
+                                                    <th>Email</th>
+                                                    <th>Gender</th>
+                                                    <th>Address</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>company_name</td>
-                                                    <td>Tesla</td>
+                                                    <td>John Doe</td>
+                                                    <td>xx.xx.xxxx</td>
+                                                    <td>johndoe@mail.com</td>
+                                                    <td>L</td>
+                                                    <td>United States</td>
                                                     <td>
                                                         <a href="#"> <i
                                                                 class="fe fe-eye text-primary fe-16 mx-1"></i></a>
@@ -140,17 +149,17 @@
                                     </div>
                                 </div>
                             </div> <!-- simple table -->
-                        </div> <!-- end section -->
+                        </div>
                     </div> <!-- .col-12 -->
                 </div> <!-- .row -->
             </div> <!-- .container-fluid -->
             <!-- Modal -->
-            <div class="modal fade" id="metadataModal" tabindex="-1" role="dialog" aria-labelledby="metadataModalTitle"
+            <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="metadataModalTitle">Add New Metadata
+                            <h5 class="modal-title" id="teamModalTitle">Add New Team
                             </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -160,27 +169,69 @@
                             <form class="needs-validation" novalidate>
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
-                                        <label for="key">Key</label>
-                                        <input type="text" class="form-control" id="key" required>
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" required>
                                         <div class="invalid-feedback"> Please use a valid
-                                            key</div>
+                                            name</div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
-                                        <label for="value">Value</label>
-                                        <input type="text" class="form-control" id="value" required>
+                                        <label for="id_card">ID Card</label>
+                                        <input type="text" class="form-control" id="id_card" required>
                                         <div class="invalid-feedback"> Please use a valid
-                                            value</div>
+                                            id card</div>
                                     </div>
                                 </div>
-
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback"> Please use a valid
+                                            email</div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="gender">Gender</label>
+                                        <select class="custom-select" id="gender" required>
+                                            <option value="L">Man</option>
+                                            <option value="P">Woman</option>
+                                        </select>
+                                        <div class="invalid-feedback"> Please choose your gender</div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <p>Avatar</p>
+                                        <img id="image" class="d-none mb-3" src="" alt="your image"
+                                            style="max-width:600px;" />
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="thumbnail"
+                                                onchange="readURL(this);" required>
+                                            <label class="custom-file-label" for="thumbnail">Choose
+                                                file...</label>
+                                            <div class="invalid-feedback">Example
+                                                invalid custom file feedback</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="address">Address</label>
+                                        <textarea class="form-control" id="address" placeholder="Take a note here"
+                                            required="" rows="3"></textarea>
+                                        <div class="invalid-feedback"> Please enter a
+                                            address in the textarea. </div>
+                                    </div>
+                                </div>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn mb-2 btn-primary">Save
                                 changes</button>
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -201,7 +252,22 @@
     <script src='js/jquery.steps.min.js'></script>
     <script src='js/jquery.validate.min.js'></script>
     <script>
-        $('#metadataDataTable').DataTable({
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image').removeClass("d-none");
+                    $('#image')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <script>
+        $('#teamDataTable').DataTable({
             autoWidth: true,
         });
     </script>
