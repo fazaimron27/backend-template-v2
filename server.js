@@ -11,8 +11,11 @@ app.use("/static", express.static(__dirname + "/public"));
 app.get("/", function (req, res) {
   res.render("index", {
     title: "Dashboard",
-    styles: null,
-    scripts: null,
+    styles: ["dataTables.bootstrap4.css"],
+    scripts: [
+      "jquery.dataTables.min.js",
+      "dataTables.bootstrap4.min.js",
+    ],
   });
 });
 
