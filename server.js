@@ -12,21 +12,19 @@ app.get("/", function (req, res) {
   res.render("index", {
     title: "Dashboard",
     styles: ["dataTables.bootstrap4.css"],
-    scripts: [
-      "jquery.dataTables.min.js",
-      "dataTables.bootstrap4.min.js",
-    ],
+    scripts: ["jquery.dataTables.min.js", "dataTables.bootstrap4.min.js"],
   });
 });
 
 app.get("/teams", function (req, res) {
   res.render("teams", {
     title: "Teams",
-    styles: ["dataTables.bootstrap4.css", "style.css"],
+    styles: ["dataTables.bootstrap4.css", "style.css", "select2.css"],
     scripts: [
       "jquery.dataTables.min.js",
       "dataTables.bootstrap4.min.js",
       "jquery.validate.min.js",
+      "select2.min.js",
     ],
   });
 });
